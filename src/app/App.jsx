@@ -1,19 +1,16 @@
 import * as React from "react";
-import { Routes, Route } from "react-router-dom";
-import Auth from "../pages/auth";
-import DataUser from "../pages/dataUser";
+import { useNavigate } from "react-router-dom";
+import { getTokenStore } from "../hooks/useValidation";
 import './../style/style.css'
 
 function App() {
+  const navigate = useNavigate();
 
-  return (
-    <div className="">
-      <Routes>
-        <Route path="/" element={<Auth />} />
-        <Route path="/:id" element={<DataUser />} />
-      </Routes>
-    </div >
-  )
+  if (getTokenStore()) {
+    return navigate(`/wallet/${localStorage.getItem("token")}`);
+  } else {
+    return navigate(`/auth`);
+  }
 }
 
 export default App

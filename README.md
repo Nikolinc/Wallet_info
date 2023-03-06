@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+### `rm -rf yarn.lock`
+
 In the project directory, you can run:
 
 ### `yarn dev`
