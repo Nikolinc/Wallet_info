@@ -2,9 +2,10 @@ import { useState } from "react";
 import Coins from "../assets/Coins.svg";
 import Coin from "../assets/Coin.svg";
 import Logo from "../assets/Logo.svg";
+import { Link } from "react-router-dom";
 
 function Login() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   return (
     <section className="bg-[#3D404D]">
@@ -107,9 +108,12 @@ function Login() {
               </div>
 
               <div className="col-span-6 sm:flex sm:items-end sm:gap-4 sm:justify-center">
-                <button className="inline-block shrink-0 rounded-md border border-[#5330E6] bg-[#5330E6] px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500 dark:hover:bg-blue-700 dark:hover:text-white">
+                <Link
+                  className="inline-block shrink-0 rounded-md border border-[#5330E6] bg-[#5330E6] px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500 dark:hover:bg-blue-700 dark:hover:text-white"
+                  to={"/Home"}
+                >
                   Continue
-                </button>
+                </Link>
               </div>
             </form>
           </div>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
+import Home from "../pages/home";
 import Login from "../pages/login";
 
 function App() {
@@ -7,9 +8,8 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<div>Home</div>} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/about" element={<div>About</div>} />
+      <Route path="/Home" element={<Home />} />
+      <Route path="/" element={<Login />} />
     </Routes>
   );
 }
